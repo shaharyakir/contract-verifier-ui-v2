@@ -19,3 +19,23 @@ jobs:
       - run: npm ci
       - run: CI=false npm run build
       # - run: npm test
+            - isim: Önbellek
+  kullanımlar: actions/cache@v4.0.2
+  ile:
+    # Önbelleğe alınacak ve geri yüklenecek dosyaların, dizinlerin ve joker karakter desenlerinin listesi
+    yol:
+    # Önbelleği geri yüklemek ve kaydetmek için açık bir anahtar
+    anahtar:
+    # Anahtar için önbellek isabeti gerçekleşmediğinde eski önbelleği geri yüklemek için kullanılacak anahtarların sıralı listesi. Bu durumda `cache-hit` false değerini döndürdüğünü unutmayın.
+    restore-keys: # isteğe bağlı
+    # Yükleme sırasında büyük dosyaları bölmek için kullanılan parça boyutu (bayt cinsinden)
+    upload-chunk-size: # isteğe bağlı
+    # Etkinleştirildiğinde isteğe bağlı bir Boole değeri, Windows çalıştırıcılarının diğer platformlarda sırasıyla geri yüklenebilen veya kaydedilebilen önbellekleri kaydetmesine veya geri yüklemesine olanak tanır
+    enableCrossOsArchive: # isteğe bağlı, varsayılanı false'tur
+    # Önbellek girişi bulunmazsa iş akışı başarısız olur
+    fail-on-cache-miss: # isteğe bağlı, varsayılanı false
+    # Önbelleği indirmeden, verilen girdi(ler) (anahtar, geri yükleme anahtarları) için bir önbellek girişinin var olup olmadığını kontrol edin
+    yalnızca arama: # isteğe bağlı, varsayılanı yanlıştır
+    # Önceki adım başarısız olsa bile önbelleği kaydetmek için post adımını çalıştırın
+    save-always: # isteğe bağlı, varsayılanı false'tur
+          
