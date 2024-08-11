@@ -19,3 +19,19 @@ jobs:
       - run: npm ci
       - run: CI=false npm run build
       # - run: npm test
+            - adı: Salesforce için Kaliteli Bulut Yapı Kontrolü
+  # Belirli bir commit'e veya versiyona sabitleyebilirsiniz.
+  # kullanımlar: qualityclouds/action-full-scan@4bc13bbfa27d8eaa0bc4978ac161d148a6f70ac4
+  kullanımlar: qualityclouds/action-full-scan@1.0.1
+  ile:
+    # Kodunuzun kontrol edileceği Quality Clouds kuralları setini bağlamak için geçerli bir API anahtarı sağlamanız gerekir
+    jeton:
+    # Özellik dalı taramasını çalıştırmak için bulut modunu kullanın
+    mod: # isteğe bağlı
+    # Örnek kimliği. Bulut modu etkinleştirildiğinde gereklidir.
+    url_id: # isteğe bağlı
+    # Özellik dalı taramasını çalıştırmak için bulut modunu kullanın
+    api_url: # isteğe bağlı
+    # Koşu versiyonunu özelleştir
+    sürüm: # isteğe bağlı
+          
