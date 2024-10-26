@@ -1,0 +1,124 @@
+SETCP0
+(:methods
+  recv_internal: 
+    s2 POP
+    s1 PUSH
+    SEMPTY
+    <{
+      3 BLKDROP
+    }> PUSHCONT
+    IFJMP
+    CTOS
+    4 LDU
+    s0 s1 XCHG
+    1 PUSHINT
+    AND
+    <{
+      3 BLKDROP
+    }> PUSHCONT
+    IFJMP
+    LDMSGADDR
+    s1 POP
+    LDMSGADDR
+    s1 POP
+    LDGRAMS
+    s1 POP
+    1 PUSHINT
+    SDSKIPFIRST
+    LDGRAMS
+    s1 POP
+    LDGRAMS
+    s0 POP
+    2 CALLDICT
+    s0 s3 XCHG
+    32 LDU
+    64 LDU
+    85167505 PUSHINT
+    s1 s3 XCHG
+    EQUAL
+    <{
+      s0 s1 s4 XCHG3
+      s0 s3 XCHG
+      s0 POP
+      s4 POP
+      s0 s3 XCHG
+      LDMSGADDR
+      1 LDI
+      s1 POP
+      LDGRAMS
+      85167505 PUSHINT
+      NEWC
+      s0 s6 XCHG2
+      STSLICER
+      s0 s1 XCHG
+      STSLICER
+      s2 PUSH
+      s3 s1 s4 XCHG3
+      s5 s6 s6 XCHG3
+      1 PUSHINT
+      0 PUSHINT
+      16 PUSHINT
+      NEWC
+      6 STU
+      s0 s7 XCHG2
+      STSLICER
+      s0 s5 XCHG2
+      STGRAMS
+      s1 s5 XCHG
+      107 STU
+      s1 s2 XCHG
+      32 STU
+      64 STU
+      s2 PUSH
+      ISNULL
+      NOT
+      <{
+        ROT
+        STBR
+        s0 s1 XCHG
+      }> PUSHCONT
+      <{
+        s2 POP
+      }> PUSHCONT
+      IFELSE
+      s0 s1 XCHG
+      ENDC
+      s0 s1 XCHG
+      SENDRAWMSG
+      s0 s1 XCHG
+      3 CALLDICT
+    }> IFJMPREF
+    6 BLKDROP
+    16 PUSHPOW2DEC
+    THROWANY
+
+  2: 
+    c4 PUSH
+    CTOS
+    LDMSGADDR
+    LDREF
+    s0 POP
+
+  3: 
+    NEWC
+    ROT
+    STSLICER
+    STREF
+    ENDC
+    c4 POP
+
+  get_nft_data: 
+    2 CALLDICT
+    0 PUSHINT
+    NEWC
+    2 STU
+    ENDC
+    -1 PUSHINT
+    0 PUSHINT
+    s0 s2 XCHG
+    CTOS
+    s0 s4 s3 XCHG3
+) 19 DICTPUSHCONST
+DICTIGETJMPZ
+11 THROWARG
+
