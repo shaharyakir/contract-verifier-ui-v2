@@ -1,0 +1,1852 @@
+SETCP0
+(:methods
+  recv_internal: 
+    c2 SAVE
+    SAMEALTSAVE
+    s0 PUSH
+    SEMPTY
+    <{
+      4 BLKDROP
+    }> PUSHCONT
+    IFJMP
+    s1 PUSH
+    CTOS
+    4 LDU
+    0 PUSHINT
+    s0 s2 XCHG
+    1 PUSHINT
+    AND
+    <{
+      s1 POP
+      -1 PUSHINT
+      s0 s2 XCHG
+      32 PUSHINT
+      SDSKIPFIRST
+      ROTREV
+    }> PUSHCONT
+    IF
+    LDMSGADDR
+    LDMSGADDR
+    s1 POP
+    LDGRAMS
+    s1 POP
+    1 PUSHINT
+    SDSKIPFIRST
+    LDGRAMS
+    s1 POP
+    LDGRAMS
+    s0 POP
+    3 PUSHINT
+    RSHIFT 1 QOUT
+    s0 s3 XCHG
+    32 LDU
+    64 LDU
+    s4 s8 XCHG
+    s3 s7 XCHG
+    s5 s6 XCHG
+    s5 s0 s4 XCHG3
+    s3 s1 s3 XCHG3
+    9 TUPLE
+    1 SETGLOBVAR
+    1 GETGLOBVAR
+    0 INDEX
+    <{
+      <{
+        c4 PUSH
+        CTOS
+        2 LDU
+        s0 s1 XCHG
+        3 SETGLOBVAR
+        LDMSGADDR
+        s0 s1 XCHG
+        12 SETGLOBVAR
+        256 LDU
+        s0 s1 XCHG
+        7 SETGLOBVAR
+        256 LDU
+        s0 s1 XCHG
+        8 SETGLOBVAR
+        64 LDU
+        s0 s1 XCHG
+        9 SETGLOBVAR
+        64 LDU
+        s0 s1 XCHG
+        4 SETGLOBVAR
+        64 LDU
+        s0 s1 XCHG
+        5 SETGLOBVAR
+        LDREF
+        s0 s1 XCHG
+        13 SETGLOBVAR
+        13 GETGLOBVAR
+        CTOS
+        LDGRAMS
+        s0 s1 XCHG
+        10 SETGLOBVAR
+        LDGRAMS
+        s0 s1 XCHG
+        6 SETGLOBVAR
+        LDMSGADDR
+        s0 s1 XCHG
+        11 SETGLOBVAR
+        64 LDU
+        s0 s1 XCHG
+        2 SETGLOBVAR
+        ENDS
+        ENDS
+      }> CALLREF
+      1 GETGLOBVAR
+      3 INDEX
+      2872264078 PUSHINT
+      EQUAL
+      1 GETGLOBVAR
+      3 INDEX
+      240249563 PUSHINT
+      EQUAL
+      OR
+      1 GETGLOBVAR
+      3 INDEX
+      2704352406 PUSHINT
+      EQUAL
+      OR
+      <{
+        1 GETGLOBVAR
+        1 INDEX
+        11 GETGLOBVAR
+        SDEQ
+        <{
+          0 PUSHINT
+          9 SETGLOBVAR
+          1 PUSHINT
+          3 SETGLOBVAR
+          <{
+            13 GETGLOBVAR
+            5 GETGLOBVAR
+            4 GETGLOBVAR
+            9 GETGLOBVAR
+            8 GETGLOBVAR
+            7 GETGLOBVAR
+            3 GETGLOBVAR
+            NEWC
+            2 STU
+            12 GETGLOBVAR
+            STSLICER
+            256 STU
+            256 STU
+            64 STU
+            64 STU
+            64 STU
+            STREF
+            ENDC
+            c4 POP
+          }> CALLREF
+          0 PUSHINT
+          12 GETGLOBVAR
+          66 PUSHINT
+          3576854235 PUSHINT
+          ROTREV
+          <{
+            1 GETGLOBVAR
+            4 INDEX
+            0 PUSHINT
+            16 PUSHINT
+            NEWC
+            6 STU
+            s0 s4 XCHG2
+            STSLICER
+            s0 s5 XCHG2
+            STGRAMS
+            s1 s2 XCHG
+            107 STU
+            s1 s2 XCHG
+            32 STU
+            s1 s2 XCHG
+            64 STU
+            ENDC
+            s0 s1 XCHG
+            SENDRAWMSG
+          }> CALLREF
+        }> PUSHCONT
+        IF
+      }> IFREFELSEREF
+      1 GETGLOBVAR
+      3 INDEX
+      86296494 PUSHINT
+      EQUAL
+      <{
+        0 PUSHINT
+        3247343314 PUSHINT
+        12 GETGLOBVAR
+        66 PUSHINT
+        <{
+          1 GETGLOBVAR
+          4 INDEX
+          0 PUSHINT
+          16 PUSHINT
+          NEWC
+          6 STU
+          s0 s4 XCHG2
+          STSLICER
+          s0 s5 XCHG2
+          STGRAMS
+          s1 s2 XCHG
+          107 STU
+          s1 s2 XCHG
+          32 STU
+          s1 s2 XCHG
+          64 STU
+          ENDC
+          s0 s1 XCHG
+          SENDRAWMSG
+        }> CALLREF
+      }> PUSHCONT
+      <{
+        0 PUSHINT
+        12 GETGLOBVAR
+        66 PUSHINT
+        3576854235 PUSHINT
+        ROTREV
+        <{
+          1 GETGLOBVAR
+          4 INDEX
+          0 PUSHINT
+          16 PUSHINT
+          NEWC
+          6 STU
+          s0 s4 XCHG2
+          STSLICER
+          s0 s5 XCHG2
+          STGRAMS
+          s1 s2 XCHG
+          107 STU
+          s1 s2 XCHG
+          32 STU
+          s1 s2 XCHG
+          64 STU
+          ENDC
+          s0 s1 XCHG
+          SENDRAWMSG
+        }> CALLREF
+      }> PUSHCONT
+      IFELSE
+    }> PUSHCONT
+    IFJMP
+    10085 PUSHINT
+    1 GETGLOBVAR
+    1 INDEX
+    REWRITESTDADDR
+    s0 POP
+    0 EQINT
+    THROWANYIFNOT
+    <{
+      c4 PUSH
+      CTOS
+      2 LDU
+      s0 s1 XCHG
+      3 SETGLOBVAR
+      LDMSGADDR
+      s0 s1 XCHG
+      12 SETGLOBVAR
+      256 LDU
+      s0 s1 XCHG
+      7 SETGLOBVAR
+      256 LDU
+      s0 s1 XCHG
+      8 SETGLOBVAR
+      64 LDU
+      s0 s1 XCHG
+      9 SETGLOBVAR
+      64 LDU
+      s0 s1 XCHG
+      4 SETGLOBVAR
+      64 LDU
+      s0 s1 XCHG
+      5 SETGLOBVAR
+      LDREF
+      s0 s1 XCHG
+      13 SETGLOBVAR
+      13 GETGLOBVAR
+      CTOS
+      LDGRAMS
+      s0 s1 XCHG
+      10 SETGLOBVAR
+      LDGRAMS
+      s0 s1 XCHG
+      6 SETGLOBVAR
+      LDMSGADDR
+      s0 s1 XCHG
+      11 SETGLOBVAR
+      64 LDU
+      s0 s1 XCHG
+      2 SETGLOBVAR
+      ENDS
+      ENDS
+    }> CALLREF
+    1 GETGLOBVAR
+    1 INDEX
+    11 GETGLOBVAR
+    SDEQ
+    <{
+      1 GETGLOBVAR
+      7 INDEX
+      1 GETGLOBVAR
+      3 INDEX
+      3148270538 PUSHINT
+      EQUAL
+      <{
+        10803 PUSHINT
+        3 GETGLOBVAR
+        0 EQINT
+        THROWANYIFNOT
+        1 PUSHINT
+        3 SETGLOBVAR
+        LDGRAMS
+        s0 s1 XCHG
+        6 SETGLOBVAR
+        64 LDU
+        s0 s1 XCHG
+        5 SETGLOBVAR
+        64 LDU
+        s0 s1 XCHG
+        4 SETGLOBVAR
+        LDMSGADDR
+        s0 s1 XCHG
+        12 SETGLOBVAR
+        LDREFRTOS
+        s1 POP
+        256 LDU
+        s0 s1 XCHG
+        8 SETGLOBVAR
+        256 LDU
+        s0 s1 XCHG
+        7 SETGLOBVAR
+        LDGRAMS
+        s0 POP
+        10 SETGLOBVAR
+        <{
+          2 GETGLOBVAR
+          NEWC
+          10 GETGLOBVAR
+          STGRAMS
+          6 GETGLOBVAR
+          STGRAMS
+          11 GETGLOBVAR
+          STSLICER
+          64 STU
+          ENDC
+          13 SETGLOBVAR
+          <{
+            13 GETGLOBVAR
+            5 GETGLOBVAR
+            4 GETGLOBVAR
+            9 GETGLOBVAR
+            8 GETGLOBVAR
+            7 GETGLOBVAR
+            3 GETGLOBVAR
+            NEWC
+            2 STU
+            12 GETGLOBVAR
+            STSLICER
+            256 STU
+            256 STU
+            64 STU
+            64 STU
+            64 STU
+            STREF
+            ENDC
+            c4 POP
+          }> CALLREF
+        }> CALLREF
+        50000000 PUSHINT
+        1 GETGLOBVAR
+        5 INDEX
+        MIN
+        0 PUSHINT
+        RAWRESERVE
+        0 PUSHINT
+        12 GETGLOBVAR
+        130 PUSHINT
+        3576854235 PUSHINT
+        ROTREV
+        <{
+          1 GETGLOBVAR
+          4 INDEX
+          0 PUSHINT
+          16 PUSHINT
+          NEWC
+          6 STU
+          s0 s4 XCHG2
+          STSLICER
+          s0 s5 XCHG2
+          STGRAMS
+          s1 s2 XCHG
+          107 STU
+          s1 s2 XCHG
+          32 STU
+          s1 s2 XCHG
+          64 STU
+          ENDC
+          s0 s1 XCHG
+          SENDRAWMSG
+        }> CALLREF
+      }> PUSHCONT
+      <{
+        1 GETGLOBVAR
+        3 INDEX
+        3339533477 PUSHINT
+        EQUAL
+        <{
+          10803 PUSHINT
+          3 GETGLOBVAR
+          3 EQINT
+          THROWANYIFNOT
+          256 LDU
+          s0 POP
+          7 SETGLOBVAR
+          1 PUSHINT
+          3 SETGLOBVAR
+          <{
+            13 GETGLOBVAR
+            5 GETGLOBVAR
+            4 GETGLOBVAR
+            9 GETGLOBVAR
+            8 GETGLOBVAR
+            7 GETGLOBVAR
+            3 GETGLOBVAR
+            NEWC
+            2 STU
+            12 GETGLOBVAR
+            STSLICER
+            256 STU
+            256 STU
+            64 STU
+            64 STU
+            64 STU
+            STREF
+            ENDC
+            c4 POP
+          }> CALLREF
+          1 GETGLOBVAR
+          5 INDEX
+          1 GETGLOBVAR
+          6 INDEX
+          SUB
+          50000000 PUSHINT
+          MAX
+          0 PUSHINT
+          RAWRESERVE
+          0 PUSHINT
+          12 GETGLOBVAR
+          130 PUSHINT
+          3576854235 PUSHINT
+          ROTREV
+          <{
+            1 GETGLOBVAR
+            4 INDEX
+            0 PUSHINT
+            16 PUSHINT
+            NEWC
+            6 STU
+            s0 s4 XCHG2
+            STSLICER
+            s0 s5 XCHG2
+            STGRAMS
+            s1 s2 XCHG
+            107 STU
+            s1 s2 XCHG
+            32 STU
+            s1 s2 XCHG
+            64 STU
+            ENDC
+            s0 s1 XCHG
+            SENDRAWMSG
+          }> CALLREF
+        }> PUSHCONT
+        IFJMP
+        1 GETGLOBVAR
+        3 INDEX
+        246234855 PUSHINT
+        EQUAL
+        <{
+          10803 PUSHINT
+          3 GETGLOBVAR
+          3 EQINT
+          THROWANYIFNOT
+          1 PUSHINT
+          3 SETGLOBVAR
+          64 LDU
+          s0 s1 XCHG
+          5 SETGLOBVAR
+          64 LDU
+          s0 s1 XCHG
+          4 SETGLOBVAR
+          256 LDU
+          s0 s1 XCHG
+          8 SETGLOBVAR
+          256 LDU
+          s0 s1 XCHG
+          7 SETGLOBVAR
+          10 GETGLOBVAR
+          s0 s1 XCHG
+          LDGRAMS
+          s0 POP
+          ADD
+          10 SETGLOBVAR
+          <{
+            2 GETGLOBVAR
+            NEWC
+            10 GETGLOBVAR
+            STGRAMS
+            6 GETGLOBVAR
+            STGRAMS
+            11 GETGLOBVAR
+            STSLICER
+            64 STU
+            ENDC
+            13 SETGLOBVAR
+            <{
+              13 GETGLOBVAR
+              5 GETGLOBVAR
+              4 GETGLOBVAR
+              9 GETGLOBVAR
+              8 GETGLOBVAR
+              7 GETGLOBVAR
+              3 GETGLOBVAR
+              NEWC
+              2 STU
+              12 GETGLOBVAR
+              STSLICER
+              256 STU
+              256 STU
+              64 STU
+              64 STU
+              64 STU
+              STREF
+              ENDC
+              c4 POP
+            }> CALLREF
+          }> CALLREF
+          1 GETGLOBVAR
+          5 INDEX
+          1 GETGLOBVAR
+          6 INDEX
+          SUB
+          50000000 PUSHINT
+          MAX
+          0 PUSHINT
+          RAWRESERVE
+          0 PUSHINT
+          12 GETGLOBVAR
+          130 PUSHINT
+          3576854235 PUSHINT
+          ROTREV
+          <{
+            1 GETGLOBVAR
+            4 INDEX
+            0 PUSHINT
+            16 PUSHINT
+            NEWC
+            6 STU
+            s0 s4 XCHG2
+            STSLICER
+            s0 s5 XCHG2
+            STGRAMS
+            s1 s2 XCHG
+            107 STU
+            s1 s2 XCHG
+            32 STU
+            s1 s2 XCHG
+            64 STU
+            ENDC
+            s0 s1 XCHG
+            SENDRAWMSG
+          }> CALLREF
+        }> IFJMPREF
+        s0 POP
+        1 GETGLOBVAR
+        3 INDEX
+        2681672647 PUSHINT
+        EQUAL
+        <{
+          0 PUSHINT
+          12 GETGLOBVAR
+          66 PUSHINT
+          3576854235 PUSHINT
+          ROTREV
+          <{
+            1 GETGLOBVAR
+            4 INDEX
+            0 PUSHINT
+            16 PUSHINT
+            NEWC
+            6 STU
+            s0 s4 XCHG2
+            STSLICER
+            s0 s5 XCHG2
+            STGRAMS
+            s1 s2 XCHG
+            107 STU
+            s1 s2 XCHG
+            32 STU
+            s1 s2 XCHG
+            64 STU
+            ENDC
+            s0 s1 XCHG
+            SENDRAWMSG
+          }> CALLREF
+        }> PUSHCONT
+        IFJMP
+        16 PUSHPOW2DEC
+        THROWANY
+      }> IFELSEREF
+    }> IFJMPREF
+    1 GETGLOBVAR
+    1 INDEX
+    12 GETGLOBVAR
+    SDEQ
+    <{
+      1 GETGLOBVAR
+      7 INDEX
+      1 GETGLOBVAR
+      3 INDEX
+      3851683861 PUSHINT
+      EQUAL
+      <{
+        10803 PUSHINT
+        3 GETGLOBVAR
+        1 EQINT
+        THROWANYIFNOT
+        10083 PUSHINT
+        1 GETGLOBVAR
+        6 INDEX
+        1 GETGLOBVAR
+        2 INDEX
+        2 LSHIFT
+        50000000 PUSHINT
+        ADD
+        20000000 PUSHINT
+        ADD
+        100000000 PUSHINT
+        ADD
+        20000000 PUSHINT
+        ADD
+        10000000 PUSHINT
+        ADD
+        50000000 PUSHINT
+        ADD
+        GREATER
+        THROWANYIFNOT
+        1 GETGLOBVAR
+        5 INDEX
+        1 GETGLOBVAR
+        6 INDEX
+        SUB
+        50000000 PUSHINT
+        MAX
+        0 PUSHINT
+        RAWRESERVE
+        LDMSGADDR
+        LDREF
+        s0 POP
+        0 PUSHINT
+        11 GETGLOBVAR
+        2SWAP
+        c4 PUSH
+        NOW
+        2 GETGLOBVAR
+        3132232339 PUSHINT
+        1 GETGLOBVAR
+        4 INDEX
+        s0 s1 XCHG
+        NEWC
+        32 STU
+        64 STU
+        64 STU
+        s0 s4 XCHG2
+        STSLICER
+        s1 s3 XCHG
+        64 STU
+        s1 s2 XCHG
+        STREF
+        STREF
+        ENDC
+        7 PUSHPOW2
+        <{
+          1 PUSHINT
+          24 PUSHINT
+          NEWC
+          6 STU
+          s0 s4 XCHG2
+          STSLICER
+          s0 s4 XCHG2
+          STGRAMS
+          s1 s2 XCHG
+          107 STU
+          STREF
+          ENDC
+          s0 s1 XCHG
+          SENDRAWMSG
+        }> CALLREF
+        -1 PUSHINT
+      }> IFREFELSEREF
+      <{
+        RETALT
+      }> PUSHCONT
+      IFJMP
+      1 GETGLOBVAR
+      3 INDEX
+      1607220500 PUSHINT
+      EQUAL
+      <{
+        s0 POP
+        413 THROW
+        -1 PUSHINT
+      }> PUSHCONT
+      IFJMP
+      1 GETGLOBVAR
+      3 INDEX
+      3106497952 PUSHINT
+      EQUAL
+      <{
+        s0 POP
+        10803 PUSHINT
+        3 GETGLOBVAR
+        1 EQINT
+        THROWANYIFNOT
+        10083 PUSHINT
+        1 GETGLOBVAR
+        6 INDEX
+        1 GETGLOBVAR
+        2 INDEX
+        2 LSHIFT
+        50000000 PUSHINT
+        ADD
+        20000000 PUSHINT
+        ADD
+        100000000 PUSHINT
+        ADD
+        50000000 PUSHINT
+        ADD
+        20000000 PUSHINT
+        ADD
+        50000000 PUSHINT
+        ADD
+        GREATER
+        THROWANYIFNOT
+        2 PUSHINT
+        3 SETGLOBVAR
+        NOW
+        9 SETGLOBVAR
+        1 GETGLOBVAR
+        5 INDEX
+        1 GETGLOBVAR
+        6 INDEX
+        SUB
+        50000000 PUSHINT
+        MAX
+        0 PUSHINT
+        RAWRESERVE
+        0 PUSHINT
+        11 GETGLOBVAR
+        7 GETGLOBVAR
+        8 GETGLOBVAR
+        NEWC
+        256 STU
+        256 STU
+        ENDC
+        4 GETGLOBVAR
+        2 GETGLOBVAR
+        2704352406 PUSHINT
+        1 GETGLOBVAR
+        4 INDEX
+        s0 s1 XCHG
+        NEWC
+        32 STU
+        64 STU
+        64 STU
+        64 STU
+        6 GETGLOBVAR
+        STGRAMS
+        12 GETGLOBVAR
+        STSLICER
+        STREF
+        ENDC
+        7 PUSHPOW2
+        <{
+          1 PUSHINT
+          24 PUSHINT
+          NEWC
+          6 STU
+          s0 s4 XCHG2
+          STSLICER
+          s0 s4 XCHG2
+          STGRAMS
+          s1 s2 XCHG
+          107 STU
+          STREF
+          ENDC
+          s0 s1 XCHG
+          SENDRAWMSG
+        }> CALLREF
+        <{
+          13 GETGLOBVAR
+          5 GETGLOBVAR
+          4 GETGLOBVAR
+          9 GETGLOBVAR
+          8 GETGLOBVAR
+          7 GETGLOBVAR
+          3 GETGLOBVAR
+          NEWC
+          2 STU
+          12 GETGLOBVAR
+          STSLICER
+          256 STU
+          256 STU
+          64 STU
+          64 STU
+          64 STU
+          STREF
+          ENDC
+          c4 POP
+        }> CALLREF
+        -1 PUSHINT
+      }> PUSHCONT
+      IFJMP
+      1 GETGLOBVAR
+      3 INDEX
+      373926893 PUSHINT
+      EQUAL
+      <{
+        10803 PUSHINT
+        3 GETGLOBVAR
+        1 EQINT
+        THROWANYIFNOT
+        10083 PUSHINT
+        1 GETGLOBVAR
+        6 INDEX
+        1 GETGLOBVAR
+        2 INDEX
+        10 MULCONST
+        50000000 PUSHINT
+        ADD
+        20000000 PUSHINT
+        ADD
+        100000000 PUSHINT
+        ADD
+        50000000 PUSHINT
+        ADD
+        30000000 PUSHINT
+        ADD
+        50000000 PUSHINT
+        ADD
+        30000000 PUSHINT
+        ADD
+        20000000 PUSHINT
+        ADD
+        GREATER
+        THROWANYIFNOT
+        64 LDU
+        s0 s1 XCHG
+        s1 POP
+        7889400 PUSHINT
+        MAX
+        63115200 PUSHINT
+        MIN
+        1 GETGLOBVAR
+        5 INDEX
+        1 GETGLOBVAR
+        6 INDEX
+        SUB
+        50000000 PUSHINT
+        MAX
+        0 PUSHINT
+        RAWRESERVE
+        0 PUSHINT
+        11 GETGLOBVAR
+        s0 s2 XCHG
+        7 GETGLOBVAR
+        8 GETGLOBVAR
+        NEWC
+        256 STU
+        256 STU
+        ENDC
+        4 GETGLOBVAR
+        2 GETGLOBVAR
+        240249563 PUSHINT
+        1 GETGLOBVAR
+        4 INDEX
+        s0 s1 XCHG
+        NEWC
+        32 STU
+        64 STU
+        64 STU
+        64 STU
+        6 GETGLOBVAR
+        STGRAMS
+        12 GETGLOBVAR
+        STSLICER
+        s1 s2 XCHG
+        64 STU
+        STREF
+        ENDC
+        s1 s2 XCHG
+        7 PUSHPOW2
+        <{
+          1 PUSHINT
+          24 PUSHINT
+          NEWC
+          6 STU
+          s0 s4 XCHG2
+          STSLICER
+          s0 s4 XCHG2
+          STGRAMS
+          s1 s2 XCHG
+          107 STU
+          STREF
+          ENDC
+          s0 s1 XCHG
+          SENDRAWMSG
+        }> CALLREF
+        3 PUSHINT
+        3 SETGLOBVAR
+        <{
+          13 GETGLOBVAR
+          5 GETGLOBVAR
+          4 GETGLOBVAR
+          9 GETGLOBVAR
+          8 GETGLOBVAR
+          7 GETGLOBVAR
+          3 GETGLOBVAR
+          NEWC
+          2 STU
+          12 GETGLOBVAR
+          STSLICER
+          256 STU
+          256 STU
+          64 STU
+          64 STU
+          64 STU
+          STREF
+          ENDC
+          c4 POP
+        }> CALLREF
+        -1 PUSHINT
+      }> PUSHCONT
+      IFJMP
+      1 GETGLOBVAR
+      3 INDEX
+      2027548937 PUSHINT
+      EQUAL
+      <{
+        s0 POP
+        10803 PUSHINT
+        3 GETGLOBVAR
+        1 EQINT
+        THROWANYIFNOT
+        10083 PUSHINT
+        1 GETGLOBVAR
+        6 INDEX
+        1 GETGLOBVAR
+        2 INDEX
+        2 LSHIFT
+        50000000 PUSHINT
+        ADD
+        20000000 PUSHINT
+        ADD
+        100000000 PUSHINT
+        ADD
+        30000000 PUSHINT
+        ADD
+        20000000 PUSHINT
+        ADD
+        50000000 PUSHINT
+        ADD
+        GREATER
+        THROWANYIFNOT
+        3 PUSHINT
+        3 SETGLOBVAR
+        1 GETGLOBVAR
+        5 INDEX
+        1 GETGLOBVAR
+        6 INDEX
+        SUB
+        50000000 PUSHINT
+        MAX
+        0 PUSHINT
+        RAWRESERVE
+        0 PUSHINT
+        11 GETGLOBVAR
+        7 GETGLOBVAR
+        8 GETGLOBVAR
+        2 GETGLOBVAR
+        2872264078 PUSHINT
+        1 GETGLOBVAR
+        4 INDEX
+        s0 s1 XCHG
+        NEWC
+        32 STU
+        64 STU
+        64 STU
+        256 STU
+        256 STU
+        12 GETGLOBVAR
+        STSLICER
+        ENDC
+        7 PUSHPOW2
+        <{
+          1 PUSHINT
+          24 PUSHINT
+          NEWC
+          6 STU
+          s0 s4 XCHG2
+          STSLICER
+          s0 s4 XCHG2
+          STGRAMS
+          s1 s2 XCHG
+          107 STU
+          STREF
+          ENDC
+          s0 s1 XCHG
+          SENDRAWMSG
+        }> CALLREF
+        <{
+          13 GETGLOBVAR
+          5 GETGLOBVAR
+          4 GETGLOBVAR
+          9 GETGLOBVAR
+          8 GETGLOBVAR
+          7 GETGLOBVAR
+          3 GETGLOBVAR
+          NEWC
+          2 STU
+          12 GETGLOBVAR
+          STSLICER
+          256 STU
+          256 STU
+          64 STU
+          64 STU
+          64 STU
+          STREF
+          ENDC
+          c4 POP
+        }> CALLREF
+        -1 PUSHINT
+      }> IFJMPREF
+      1 GETGLOBVAR
+      3 INDEX
+      1117846339 PUSHINT
+      EQUAL
+      <{
+        s0 POP
+        50000000 PUSHINT
+        0 PUSHINT
+        RAWRESERVE
+        0 PUSHINT
+        1 GETGLOBVAR
+        1 INDEX
+        7 PUSHPOW2
+        3576854235 PUSHINT
+        ROTREV
+        <{
+          1 GETGLOBVAR
+          4 INDEX
+          0 PUSHINT
+          16 PUSHINT
+          NEWC
+          6 STU
+          s0 s4 XCHG2
+          STSLICER
+          s0 s5 XCHG2
+          STGRAMS
+          s1 s2 XCHG
+          107 STU
+          s1 s2 XCHG
+          32 STU
+          s1 s2 XCHG
+          64 STU
+          ENDC
+          s0 s1 XCHG
+          SENDRAWMSG
+        }> CALLREF
+        -1 PUSHINT
+      }> PUSHCONT
+      IFJMP
+      1 GETGLOBVAR
+      3 INDEX
+      520377210 PUSHINT
+      EQUAL
+      <{
+        s0 POP
+        10803 PUSHINT
+        3 GETGLOBVAR
+        2 EQINT
+        THROWANYIFNOT
+        PUSHSLICE
+        12 SETGLOBVAR
+        <{
+          13 GETGLOBVAR
+          5 GETGLOBVAR
+          4 GETGLOBVAR
+          9 GETGLOBVAR
+          8 GETGLOBVAR
+          7 GETGLOBVAR
+          3 GETGLOBVAR
+          NEWC
+          2 STU
+          12 GETGLOBVAR
+          STSLICER
+          256 STU
+          256 STU
+          64 STU
+          64 STU
+          64 STU
+          STREF
+          ENDC
+          c4 POP
+        }> CALLREF
+        0 PUSHINT
+        1 GETGLOBVAR
+        1 INDEX
+        7 PUSHPOW2
+        3576854235 PUSHINT
+        ROTREV
+        <{
+          1 GETGLOBVAR
+          4 INDEX
+          0 PUSHINT
+          16 PUSHINT
+          NEWC
+          6 STU
+          s0 s4 XCHG2
+          STSLICER
+          s0 s5 XCHG2
+          STGRAMS
+          s1 s2 XCHG
+          107 STU
+          s1 s2 XCHG
+          32 STU
+          s1 s2 XCHG
+          64 STU
+          ENDC
+          s0 s1 XCHG
+          SENDRAWMSG
+        }> CALLREF
+        -1 PUSHINT
+      }> IFJMPREF
+      1 GETGLOBVAR
+      3 INDEX
+      81711432 PUSHINT
+      EQUAL
+      <{
+        LDMSGADDR
+        LDREF
+        1 LDU
+        s0 s1 XCHG
+        1 EQINT
+        s1 POP
+        9 GETGLOBVAR
+        2 GETGLOBVAR
+        1 GETGLOBVAR
+        4 INDEX
+        86296494 PUSHINT
+        NEWC
+        32 STU
+        64 STU
+        256 STU
+        12 GETGLOBVAR
+        STSLICER
+        s1 s3 XCHG
+        STREF
+        s1 s2 XCHG
+        64 STU
+        s1 PUSH
+        0 NEQINT
+        ABS
+        s0 s1 XCHG
+        1 STU
+        s0 s1 XCHG
+        <{
+          <{
+            MYADDR
+            REWRITESTDADDR
+            s1 POP
+            NEWC
+            s0 s1 XCHG
+            s0 PUSH
+            0 EQINT
+            <{
+              s0 POP
+              NEWC
+              0 PUSHINT
+              <{
+                s0 PUSH
+                64 LESSINT
+              }> PUSHCONT
+              <{
+                48 PUSHINT
+                ROT
+                8 STU
+                s0 s1 XCHG
+                INC
+              }> PUSHCONT
+              WHILE
+              s0 s1 XCHG
+              ENDC
+              CTOS
+              s0 s1 XCHG
+              3 LSHIFT
+              PLDSLICEX
+            }> PUSHCONT
+            <{
+              0 PUSHINT
+              15 PUSHINT
+              NEWC
+              <{
+                s2 PUSH
+                64 LESSINT
+              }> PUSHCONT
+              <{
+                s3 s1 PUSH2
+                AND
+                s0 PUSH
+                9 GTINT
+                <{
+                  55 ADDCONST
+                  s0 s1 XCHG
+                  8 STU
+                }> PUSHCONT
+                <{
+                  48 ADDCONST
+                  s0 s1 XCHG
+                  8 STU
+                }> PUSHCONT
+                IFELSE
+                s0 s3 XCHG
+                4 RSHIFT
+                s0 s2 XCHG
+                INC
+                s0 s1 s3 XCHG3
+              }> PUSHCONT
+              WHILE
+              2 1 BLKDROP2
+              NEWC
+              s2 POP
+              ENDC
+              CTOS
+              64 PUSHINT
+              <{
+                s0 PUSH
+                0 GTINT
+              }> PUSHCONT
+              <{
+                DEC
+                s0 PUSH
+                3 LSHIFT
+                s2 s-1 PUXC
+                -8 PUSHINT
+                SDSUBSTR
+                s1 s3 XCHG
+                STSLICER
+                s0 s2 XCHG
+              }> PUSHCONT
+              WHILE
+              2DROP
+              ENDC
+              CTOS
+              9 PUSHPOW2
+              PLDSLICEX
+            }> PUSHCONT
+            IFELSE
+            STSLICER
+            PUSHSLICE
+            STSLICER
+            ENDC
+          }> CALLREF
+          s0 s1 XCHG
+          STREF
+        }> PUSHCONT
+        IF
+        0 PUSHINT
+        s0 s1 XCHG
+        ENDC
+        s1 s2 XCHG
+        64 PUSHINT
+        <{
+          1 PUSHINT
+          24 PUSHINT
+          NEWC
+          6 STU
+          s0 s4 XCHG2
+          STSLICER
+          s0 s4 XCHG2
+          STGRAMS
+          s1 s2 XCHG
+          107 STU
+          STREF
+          ENDC
+          s0 s1 XCHG
+          SENDRAWMSG
+        }> CALLREF
+        -1 PUSHINT
+      }> PUSHCONT
+      IFJMP
+      s0 POP
+      0 PUSHINT
+    }> IFREF
+    1 GETGLOBVAR
+    3 INDEX
+    801842850 PUSHINT
+    EQUAL
+    <{
+      0 PUSHINT
+      4 PUSHINT
+      RAWRESERVE
+      2 GETGLOBVAR
+      NEWC
+      256 STU
+      11 GETGLOBVAR
+      STSLICER
+      0 PUSHINT
+      2339837749 PUSHINT
+      1 GETGLOBVAR
+      1 INDEX
+      1 3 BLKSWAP
+      64 PUSHINT
+      1 GETGLOBVAR
+      4 INDEX
+      0 PUSHINT
+      16 PUSHINT
+      NEWC
+      6 STU
+      s0 s5 XCHG2
+      STSLICER
+      s0 s6 XCHG2
+      STGRAMS
+      s1 s3 XCHG
+      107 STU
+      s1 s3 XCHG
+      32 STU
+      s1 s3 XCHG
+      64 STU
+      s1 PUSH
+      ISNULL
+      <{
+        s1 POP
+      }> PUSHCONT
+      <{
+        s0 s1 XCHG
+        STBR
+      }> PUSHCONT
+      IFELSE
+      ENDC
+      s0 s1 XCHG
+      SENDRAWMSG
+      -1 PUSHINT
+    }> PUSHCONT
+    <{
+      0 PUSHINT
+    }> PUSHCONT
+    IFELSE
+    IFRET
+    1 GETGLOBVAR
+    3 INDEX
+    3502489578 PUSHINT
+    EQUAL
+    <{
+      1 GETGLOBVAR
+      7 INDEX
+      LDMSGADDR
+      LDREF
+      1 LDU
+      s0 s1 XCHG
+      1 EQINT
+      s1 POP
+      9 GETGLOBVAR
+      2 GETGLOBVAR
+      1 GETGLOBVAR
+      4 INDEX
+      232130531 PUSHINT
+      NEWC
+      32 STU
+      64 STU
+      256 STU
+      1 GETGLOBVAR
+      1 INDEX
+      STSLICER
+      12 GETGLOBVAR
+      STSLICER
+      s1 s3 XCHG
+      STREF
+      s1 s2 XCHG
+      64 STU
+      s1 PUSH
+      0 NEQINT
+      ABS
+      s0 s1 XCHG
+      1 STU
+      s0 s1 XCHG
+      <{
+        <{
+          MYADDR
+          REWRITESTDADDR
+          s1 POP
+          NEWC
+          s0 s1 XCHG
+          s0 PUSH
+          0 EQINT
+          <{
+            s0 POP
+            NEWC
+            0 PUSHINT
+            <{
+              s0 PUSH
+              64 LESSINT
+            }> PUSHCONT
+            <{
+              48 PUSHINT
+              ROT
+              8 STU
+              s0 s1 XCHG
+              INC
+            }> PUSHCONT
+            WHILE
+            s0 s1 XCHG
+            ENDC
+            CTOS
+            s0 s1 XCHG
+            3 LSHIFT
+            PLDSLICEX
+          }> PUSHCONT
+          <{
+            0 PUSHINT
+            15 PUSHINT
+            NEWC
+            <{
+              s2 PUSH
+              64 LESSINT
+            }> PUSHCONT
+            <{
+              s3 s1 PUSH2
+              AND
+              s0 PUSH
+              9 GTINT
+              <{
+                55 ADDCONST
+                s0 s1 XCHG
+                8 STU
+              }> PUSHCONT
+              <{
+                48 ADDCONST
+                s0 s1 XCHG
+                8 STU
+              }> PUSHCONT
+              IFELSE
+              s0 s3 XCHG
+              4 RSHIFT
+              s0 s2 XCHG
+              INC
+              s0 s1 s3 XCHG3
+            }> PUSHCONT
+            WHILE
+            2 1 BLKDROP2
+            NEWC
+            s2 POP
+            ENDC
+            CTOS
+            64 PUSHINT
+            <{
+              s0 PUSH
+              0 GTINT
+            }> PUSHCONT
+            <{
+              DEC
+              s0 PUSH
+              3 LSHIFT
+              s2 s-1 PUXC
+              -8 PUSHINT
+              SDSUBSTR
+              s1 s3 XCHG
+              STSLICER
+              s0 s2 XCHG
+            }> PUSHCONT
+            WHILE
+            2DROP
+            ENDC
+            CTOS
+            9 PUSHPOW2
+            PLDSLICEX
+          }> PUSHCONT
+          IFELSE
+          STSLICER
+          PUSHSLICE
+          STSLICER
+          ENDC
+        }> CALLREF
+        s0 s1 XCHG
+        STREF
+      }> PUSHCONT
+      IF
+      0 PUSHINT
+      s0 s1 XCHG
+      ENDC
+      s1 s2 XCHG
+      64 PUSHINT
+      <{
+        1 PUSHINT
+        24 PUSHINT
+        NEWC
+        6 STU
+        s0 s4 XCHG2
+        STSLICER
+        s0 s4 XCHG2
+        STGRAMS
+        s1 s2 XCHG
+        107 STU
+        STREF
+        ENDC
+        s0 s1 XCHG
+        SENDRAWMSG
+      }> CALLREF
+    }> PUSHCONT
+    IFJMP
+    16 PUSHPOW2DEC
+    THROWANY
+
+  18: 
+    NEWC
+    s1 PUSH
+    0 LESSINT
+    <{
+      PUSHSLICE
+      STSLICER
+      s0 s1 XCHG
+      NEGATE
+      s0 s1 XCHG
+    }> PUSHCONT
+    IF
+    0 PUSHINT
+    s0 PUSH
+    1 PUSHINT
+    <{
+      s0 s4 XCHG
+      -6 PUSHINT
+      DIV BOTH
+      48 ADDCONST
+      s5 PUSH
+      MUL
+      s1 s2 XCHG
+      ADD
+      s0 s4 XCHG
+      8 LSHIFT
+      s0 s2 XCHG
+      INC
+      s1 PUSH
+      0 EQINT
+      s5 s3 s0 XCHG3
+    }> PUSHCONT
+    UNTIL
+    s0 POP
+    s3 POP
+    3 LSHIFT
+    STUX
+    ENDC
+    CTOS
+
+  84760: 
+    <{
+      c4 PUSH
+      CTOS
+      2 LDU
+      s0 s1 XCHG
+      3 SETGLOBVAR
+      LDMSGADDR
+      s0 s1 XCHG
+      12 SETGLOBVAR
+      256 LDU
+      s0 s1 XCHG
+      7 SETGLOBVAR
+      256 LDU
+      s0 s1 XCHG
+      8 SETGLOBVAR
+      64 LDU
+      s0 s1 XCHG
+      9 SETGLOBVAR
+      64 LDU
+      s0 s1 XCHG
+      4 SETGLOBVAR
+      64 LDU
+      s0 s1 XCHG
+      5 SETGLOBVAR
+      LDREF
+      s0 s1 XCHG
+      13 SETGLOBVAR
+      13 GETGLOBVAR
+      CTOS
+      LDGRAMS
+      s0 s1 XCHG
+      10 SETGLOBVAR
+      LDGRAMS
+      s0 s1 XCHG
+      6 SETGLOBVAR
+      LDMSGADDR
+      s0 s1 XCHG
+      11 SETGLOBVAR
+      64 LDU
+      s0 s1 XCHG
+      2 SETGLOBVAR
+      ENDS
+      ENDS
+    }> CALLREF
+    PUSHSLICE
+
+  97667: 
+    <{
+      c4 PUSH
+      CTOS
+      2 LDU
+      s0 s1 XCHG
+      3 SETGLOBVAR
+      LDMSGADDR
+      s0 s1 XCHG
+      12 SETGLOBVAR
+      256 LDU
+      s0 s1 XCHG
+      7 SETGLOBVAR
+      256 LDU
+      s0 s1 XCHG
+      8 SETGLOBVAR
+      64 LDU
+      s0 s1 XCHG
+      9 SETGLOBVAR
+      64 LDU
+      s0 s1 XCHG
+      4 SETGLOBVAR
+      64 LDU
+      s0 s1 XCHG
+      5 SETGLOBVAR
+      LDREF
+      s0 s1 XCHG
+      13 SETGLOBVAR
+      13 GETGLOBVAR
+      CTOS
+      LDGRAMS
+      s0 s1 XCHG
+      10 SETGLOBVAR
+      LDGRAMS
+      s0 s1 XCHG
+      6 SETGLOBVAR
+      LDMSGADDR
+      s0 s1 XCHG
+      11 SETGLOBVAR
+      64 LDU
+      s0 s1 XCHG
+      2 SETGLOBVAR
+      ENDS
+      ENDS
+    }> CALLREF
+    9 GETGLOBVAR
+
+  get_nft_data: 
+    <{
+      c4 PUSH
+      CTOS
+      2 LDU
+      s0 s1 XCHG
+      3 SETGLOBVAR
+      LDMSGADDR
+      s0 s1 XCHG
+      12 SETGLOBVAR
+      256 LDU
+      s0 s1 XCHG
+      7 SETGLOBVAR
+      256 LDU
+      s0 s1 XCHG
+      8 SETGLOBVAR
+      64 LDU
+      s0 s1 XCHG
+      9 SETGLOBVAR
+      64 LDU
+      s0 s1 XCHG
+      4 SETGLOBVAR
+      64 LDU
+      s0 s1 XCHG
+      5 SETGLOBVAR
+      LDREF
+      s0 s1 XCHG
+      13 SETGLOBVAR
+      13 GETGLOBVAR
+      CTOS
+      LDGRAMS
+      s0 s1 XCHG
+      10 SETGLOBVAR
+      LDGRAMS
+      s0 s1 XCHG
+      6 SETGLOBVAR
+      LDMSGADDR
+      s0 s1 XCHG
+      11 SETGLOBVAR
+      64 LDU
+      s0 s1 XCHG
+      2 SETGLOBVAR
+      ENDS
+      ENDS
+    }> CALLREF
+    3 GETGLOBVAR
+    0 GTINT
+    2 GETGLOBVAR
+    11 GETGLOBVAR
+    12 GETGLOBVAR
+    <{
+      MYADDR
+      REWRITESTDADDR
+      s1 POP
+      NEWC
+      s0 s1 XCHG
+      s0 PUSH
+      0 EQINT
+      <{
+        s0 POP
+        NEWC
+        0 PUSHINT
+        <{
+          s0 PUSH
+          64 LESSINT
+        }> PUSHCONT
+        <{
+          48 PUSHINT
+          ROT
+          8 STU
+          s0 s1 XCHG
+          INC
+        }> PUSHCONT
+        WHILE
+        s0 s1 XCHG
+        ENDC
+        CTOS
+        s0 s1 XCHG
+        3 LSHIFT
+        PLDSLICEX
+      }> PUSHCONT
+      <{
+        0 PUSHINT
+        15 PUSHINT
+        NEWC
+        <{
+          s2 PUSH
+          64 LESSINT
+        }> PUSHCONT
+        <{
+          s3 s1 PUSH2
+          AND
+          s0 PUSH
+          9 GTINT
+          <{
+            55 ADDCONST
+            s0 s1 XCHG
+            8 STU
+          }> PUSHCONT
+          <{
+            48 ADDCONST
+            s0 s1 XCHG
+            8 STU
+          }> PUSHCONT
+          IFELSE
+          s0 s3 XCHG
+          4 RSHIFT
+          s0 s2 XCHG
+          INC
+          s0 s1 s3 XCHG3
+        }> PUSHCONT
+        WHILE
+        2 1 BLKDROP2
+        NEWC
+        s2 POP
+        ENDC
+        CTOS
+        64 PUSHINT
+        <{
+          s0 PUSH
+          0 GTINT
+        }> PUSHCONT
+        <{
+          DEC
+          s0 PUSH
+          3 LSHIFT
+          s2 s-1 PUXC
+          -8 PUSHINT
+          SDSUBSTR
+          s1 s3 XCHG
+          STSLICER
+          s0 s2 XCHG
+        }> PUSHCONT
+        WHILE
+        2DROP
+        ENDC
+        CTOS
+        9 PUSHPOW2
+        PLDSLICEX
+      }> PUSHCONT
+      IFELSE
+      STSLICER
+      PUSHSLICE
+      STSLICER
+      ENDC
+    }> CALLREF
+
+  108033: 
+    <{
+      c4 PUSH
+      CTOS
+      2 LDU
+      s0 s1 XCHG
+      3 SETGLOBVAR
+      LDMSGADDR
+      s0 s1 XCHG
+      12 SETGLOBVAR
+      256 LDU
+      s0 s1 XCHG
+      7 SETGLOBVAR
+      256 LDU
+      s0 s1 XCHG
+      8 SETGLOBVAR
+      64 LDU
+      s0 s1 XCHG
+      9 SETGLOBVAR
+      64 LDU
+      s0 s1 XCHG
+      4 SETGLOBVAR
+      64 LDU
+      s0 s1 XCHG
+      5 SETGLOBVAR
+      LDREF
+      s0 s1 XCHG
+      13 SETGLOBVAR
+      13 GETGLOBVAR
+      CTOS
+      LDGRAMS
+      s0 s1 XCHG
+      10 SETGLOBVAR
+      LDGRAMS
+      s0 s1 XCHG
+      6 SETGLOBVAR
+      LDMSGADDR
+      s0 s1 XCHG
+      11 SETGLOBVAR
+      64 LDU
+      s0 s1 XCHG
+      2 SETGLOBVAR
+      ENDS
+      ENDS
+    }> CALLREF
+    3 GETGLOBVAR
+    7 GETGLOBVAR
+    8 GETGLOBVAR
+    4 GETGLOBVAR
+    5 GETGLOBVAR
+    6 GETGLOBVAR
+    12 GETGLOBVAR
+    10 GETGLOBVAR
+    9 GETGLOBVAR
+) 19 DICTPUSHCONST
+DICTIGETJMPZ
+11 THROWARG
