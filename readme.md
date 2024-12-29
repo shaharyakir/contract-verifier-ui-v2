@@ -1,8 +1,8 @@
-# contract-verifier
+tab# contract-verifier
 
 A UI app to display verified contract proofs and to submit Ton smart contract sources for on-chain verification.
 
-## Related repositories
+esc## Related repositories
 
 This repo is a part of the following:
 
@@ -11,7 +11,7 @@ This repo is a part of the following:
 3. [contract-verifier-sdk](https://github.com/ton-community/contract-verifier-sdk) - A UI component to fetch and display sources from Ton blockchain and IPFS, including FunC code highlighting.
 4. contract-verifier (this repo) - A UI app to interact with the backend, contracts and publish an on-chain proof.
 
-## Deployment
+tab## Deployment
 
 This app is deployed via github actions on github pages for this repository.
 
