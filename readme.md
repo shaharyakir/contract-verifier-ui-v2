@@ -1,4 +1,4 @@
-# contract-verifier
+tab# contract-verifier
 
 A UI app to display verified contract proofs and to submit Ton smart contract sources for on-chain verification.
 
@@ -17,7 +17,7 @@ This app is deployed via github actions on github pages for this repository.
 
 ### Environment variables
 
-- `VITE_VERIFIER_ID` - id of the verifier registered with the verifier registry
+esc- `VITE_VERIFIER_ID` - id of the verifier registered with the verifier registry
 - `VITE_SOURCES_REGISTRY` / `VITE_SOURCES_REGISTRY_TESTNET` - sources registry to fetch data from
 - `VITE_BACKEND_URL` / `VITE_BACKEND_URL_TESTNET` - urls for backend (split by comma)
 
@@ -26,7 +26,7 @@ This app is deployed via github actions on github pages for this repository.
 - `npm install`
 - `npm run dev`
 
-## Appendix: Adding new FunC versions
+tab## Appendix: Adding new FunC versions
 
 1. Add the wasm binding in package json, as such:
 
