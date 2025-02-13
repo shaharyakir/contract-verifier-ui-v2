@@ -63,12 +63,12 @@ const _useGetters = create(
 
                 type: () => {
                   const param = parameterByName(get().getters, g.name, p.name);
-                  return param.possibleTypes[param.selectedTypeIdx];
+                  return param?.possibleTypes[param.selectedTypeIdx];
                 },
 
                 originalType: () => {
                   const param = parameterByName(get().getters, g.name, p.name);
-                  return param.possibleTypes[0];
+                  return param?.possibleTypes[0];
                 },
 
                 setValue: (value: string) => {
