@@ -27,11 +27,20 @@ const ContractsList = styled(Box)({
   flexDirection: "row",
   flexWrap: "wrap",
   gap: 24,
+  justifyContent: "flex-start",
   margin: "0 auto",
-  justifyContent: "left",
-  overflow: "auto",
   marginTop: 24,
-  "-webkit-text-size-adjust": "100%",
+  overflowX: "auto",
+  padding: "0 16px",
+  boxSizing: "border-box",
+
+  "@media (max-width: 768px)": {
+    flexDirection: "column",
+    gap: 16,
+    justifyContent: "center",
+  },
+
+  "-webkit-text-size-adjust": "none",
 });
 
 const AddressText = styled(Box)({
