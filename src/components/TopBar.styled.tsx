@@ -14,31 +14,36 @@ interface TopBarWrapperProps {
 const TopBarWrapper = styled(Box)(({ theme }) => (props: TopBarWrapperProps) => ({
   display: props.isMobile ? "flex" : "inherit",
   alignItems: props.isMobile ? "center" : "inherit",
-  fontWight: 700,
-  color: "#fff",
+  fontWeight: 700,
   minHeight: props.isMobile ? 80 : headerHeight,
   height:
     props.showExpanded && !props.isMobile
       ? expandedHeaderHeight
       : props.isMobile
-      ? 80
-      : headerHeight,
-  background: "#fff",
+        ? 80
+        : headerHeight,
+  background: theme.palette.mode === "dark" ? theme.palette.background.default : "#fff",
   borderBottomLeftRadius: theme.spacing(6),
   borderBottomRightRadius: theme.spacing(6),
-  border: "0.5px solid rgba(114, 138, 150, 0.24)",
-  boxShadow: "rgb(114 138 150 / 8%) 0px 2px 16px",
+  border:
+    theme.palette.mode === "dark"
+      ? `0.5px solid ${theme.palette.divider}`
+      : "0.5px solid rgba(114, 138, 150, 0.24)",
+  boxShadow:
+    theme.palette.mode === "dark"
+      ? `${theme.palette.background.paper} 0px 2px 16px`
+      : "rgb(114 138 150 / 8%) 0px 2px 16px",
 }));
 
 const ContentColumn = styled(CenteringBox)(() => ({
   gap: 10,
 }));
 
-const LinkWrapper = styled(Link)(() => ({
+const LinkWrapper = styled(Link)(({ theme }) => ({
   display: "flex",
   alignItems: "center",
   gap: 10,
-  color: "#000",
+  color: theme.palette.mode === "dark" ? theme.palette.text.primary : "#000",
   textDecoration: "none",
   cursor: "pointer",
 }));
@@ -53,21 +58,22 @@ const TopBarContent = styled(CenteringBox)(({ theme }) => ({
 }));
 
 const AppLogo = styled("h4")(({ theme }) => ({
-  color: "#000",
+  color: theme.palette.mode === "dark" ? theme.palette.text.primary : "#000",
   fontSize: 20,
   fontWeight: 800,
   [theme.breakpoints.down("sm")]: {
     fontSize: 16,
   },
 }));
-const GitLogo = styled("h5")(() => ({
-  color: "#000",
+
+const GitLogo = styled("h5")(({ theme }) => ({
+  color: theme.palette.mode === "dark" ? theme.palette.text.primary : "#000",
   fontWeight: 700,
   fontSize: 18,
 }));
 
 const TopBarHeading = styled("h3")(({ theme }) => ({
-  color: "#000",
+  color: theme.palette.mode === "dark" ? theme.palette.text.primary : "#000",
   fontSize: 26,
   marginTop: 0,
   textAlign: "center",

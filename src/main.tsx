@@ -6,8 +6,7 @@ import App from "./App";
 import ContractInteract from "./components/admin/ContractInteract";
 import "./index.css";
 import { SnackbarProvider } from "notistack";
-import { ThemeProvider } from "@mui/material";
-import { theme } from "./theme";
+import { ThemeProvider } from "./contexts/ThemeProvider";
 import { Admin } from "./components/admin/Admin";
 import { initGA } from "./lib/googleAnalytics";
 import { TactDeployer } from "./components/tactDeployer/TactDeployer";
@@ -21,7 +20,7 @@ initGA();
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <SnackbarProvider maxSnack={3}>
-    <ThemeProvider theme={theme}>
+    <ThemeProvider>
       <QueryClientProvider client={queryClient}>
         <TonConnectUIProvider manifestUrl="https://verifier.ton.org/tonconnect-manifest.json">
           <BrowserRouter basename={import.meta.env.BASE_URL}>

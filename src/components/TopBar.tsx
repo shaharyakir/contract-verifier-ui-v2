@@ -1,6 +1,6 @@
 import icon from "../assets/icon.svg";
 import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import github from "../assets/github-dark.svg";
 import { AddressInput } from "../components/AddressInput";
 import { CenteringBox } from "./Common.styled";
@@ -20,6 +20,8 @@ import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import { MobileMenu } from "./MobileMenu";
 import { useNavigatePreserveQuery } from "../lib/useNavigatePreserveQuery";
 import { StyledTonConnectButton } from "../styles";
+import ThemeToggle from "./icon/ThemeToggle";
+import { usePage } from "../contexts/ThemeProvider";
 
 export function TopBar() {
   const { pathname } = useLocation();
@@ -34,6 +36,14 @@ export function TopBar() {
   useEffect(() => {
     setShowExpanded(pathname.length === 1);
   }, [pathname]);
+
+  const { pageTheme, switchTheme } = usePage();
+  const handleSwitchTheme = (event: { preventDefault: () => void }) => {
+    event.preventDefault();
+    switchTheme();
+  };
+
+  const isThemeDark = pageTheme === "dark";
 
   return (
     <TopBarWrapper
@@ -61,6 +71,13 @@ export function TopBar() {
               <img src={github} alt="Github icon" width={20} height={20} />
               <GitLogo>GitHub</GitLogo>
             </LinkWrapper>
+            <Link
+              className="contrast"
+              onClick={handleSwitchTheme}
+              aria-label={isThemeDark ? "Turn off dark mode" : "Turn on dark mode"}
+              to={""}>
+              <ThemeToggle isDark={isThemeDark} className="w-6 h-6" />
+            </Link>
           </ContentColumn>
         </TopBarContent>
       )}
